@@ -14,7 +14,7 @@ public class SubmeshCombiner : EditorWindow
 {
     public SkinnedMeshRenderer skinnedMeshRenderer;
 
-    [MenuItem("Bnuu/Submesh Combiner")]
+    [MenuItem("Bnuuy/Submesh Combiner")]
     public static void ShowWindow()
     {
         GetWindow<SubmeshCombiner>("Submesh Combiner");
