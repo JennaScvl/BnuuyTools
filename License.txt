@@ -1,0 +1,6 @@
+Copyright 2023 JennaScvl on GitHub
+https://github.com/JennaScvl/BnuuyTools
+License: You may use and modify these scripts for your personal projects
+However you may not distribute it, nor any piece of it.
+If you wish to share the script please link to this github
+If you wish to contribute improvements, feel free to do a pull request.
