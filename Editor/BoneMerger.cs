@@ -15,7 +15,7 @@ using System.Collections.Generic;
 
 public class BoneMerger : EditorWindow
 {
-    [MenuItem("Bnuuy/Bone Merger")]
+    [MenuItem("Bunny/Bone Merger")]
     private static void Init()
     {
         GetWindow<BoneMerger>("Bone Merger");
@@ -182,6 +182,9 @@ public class BoneMerger : EditorWindow
             // Calculate the bind pose for each bone as the inverse of the bone's transformation matrix relative to the root bone's transform at the time of binding.
             // The root bone's localToWorldMatrix will transform the point from local root bone space to world space,
             // and the bone's worldToLocalMatrix will transform the point from world space to the bone's local space.
+            //if (skinnedMesh.bones[i])
+            if (skinnedMesh.bones[i] == null || skinnedMesh.transform == null) continue;
+            if (skinnedMesh.bones[i].worldToLocalMatrix == null) continue;
             bindPoses[i] = skinnedMesh.bones[i].worldToLocalMatrix * skinnedMesh.transform.localToWorldMatrix;
         }
         skinnedMesh.sharedMesh.bindposes = bindPoses;
