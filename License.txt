@@ -1,6 +1,10 @@
-Copyright 2023 JennaScvl on GitHub
+Copyright 2023 JennaScvl on GitHub, all rights reserved.
 https://github.com/JennaScvl/BnuuyTools
-License: You may use and modify these scripts for your personal projects
+License: You may use and modify this script for your personal projects
+As these are tools for manipulating assets, feel free to do whatever you want
+with the meshes you manipulate with it, as long as you have the rights to the
+meshes in question. I only care about whether or not you distribute the code
+without linking to the BnuuyTools github repository
 However you may not distribute it, nor any piece of it.
 If you wish to share the script please link to this github
 If you wish to contribute improvements, feel free to do a pull request.
