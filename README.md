@@ -13,7 +13,7 @@ Requires Mesh Saver when you're done.<br>
 Mesh Saver: This saves a SkinnedMeshRenderer's shared mesh as an asset and then applies that asset to the same SkinnedMeshRenderer. The idea here is to save your work.<br>
 <br>
 Mesh Combiner: This script takes two SkinnedMeshRenderers and merges them into a single one. It leaves the originals just in case something didn't work right. The new one ends up being named after both of the ones it derived from. It usually works but sometimes it fails to work correctly. It attempts to preserve blendshapes, bones, weights, and even tries to take into account that the two meshes in question might reference bones the other mesh doesn't have. This lets you easily reduce the number of SkinnedMeshRenderers in the avatar.<br>
-Requires Mesh Saver when you're done.
+Requires Mesh Saver when you're done.<br>
 <br>
 Submesh Combiner: This goes through a SkinnedMeshRenderer's sharedmesh and collapses all submeshes that share the same material in order to reduce the number of material references in an avatar, since many booth avatars have redundant meshes. If you use Mesh Combiner on two meshes with shared materials and then use Submesh Combiner on the resulting mesh, it usually works very well together to further optimize the avatar.<br>
 Requires Mesh Saver when you're done.<br>
