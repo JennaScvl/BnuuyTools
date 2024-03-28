@@ -24,7 +24,7 @@ public class SubmeshCombiner : EditorWindow
         GetWindow<SubmeshCombiner>("Submesh Combiner");
     }
 
-    private void OnGUI()
+   private void OnGUI()
     {
         skinnedMeshRenderer = (SkinnedMeshRenderer)EditorGUILayout.ObjectField("Skinned Mesh Renderer", skinnedMeshRenderer, typeof(SkinnedMeshRenderer), true);
 
@@ -59,13 +59,19 @@ public class SubmeshCombiner : EditorWindow
 
         for (int i = 0; i < originalMesh.subMeshCount; i++)
         {
+            int[] triangles = originalMesh.GetTriangles(i);
+
+            // Skip submeshes with 0 triangles
+            if (triangles.Length == 0) continue;
+
             Material material = materials[i];
             if (!groupedSubmeshes.ContainsKey(material))
             {
                 groupedSubmeshes[material] = new List<int[]>();
                 groupedBlendShapes[material] = new List<int>();
             }
-            groupedSubmeshes[material].Add(originalMesh.GetTriangles(i));
+
+            groupedSubmeshes[material].Add(triangles);
 
             // Collect blend shapes
             for (int j = 0; j < originalMesh.blendShapeCount; j++)
