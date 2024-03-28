@@ -32,3 +32,8 @@ This goes through a SkinnedMeshRenderer's sharedmesh and collapses all submeshes
 This lets take something skinned from one avatar and put it on another. The mesh field is the SkinnedMeshRenderer for the mesh you want to merge into an avatar. The Target Amarture is the armature of the actual avatar you're going to be putting it in. Beware, the TargetArmature needs to have all relevant bones present and they must have the correct names. You do not need to use Mesh Saver after using this.<br>
 <br>
 <b>Does not require Mesh Saver when you're done.</b><br>
+# Skinned Submesh Deleter
+This will list all of the submeshes on a skinned mesh by the name of the material they're using. You can then hit the delete button to delete the triangles in that submesh.<br>
+It does not delete the vertices to make it easier to leave blendshapes and weights alone. However it also doesn't get rid of the submesh itself. To do that, I recommend using the Submesh Combiner. Just set the materials on the deleted submeshes to an existing material and hit combine. To that end make sure you have the latest version of Submesh Combiner because I had to update it to support merging in the resulting 0 triangle submeshes. It's also been made more robust as it preserves blend shapes and orientation better now.
+<br>
+<b>Does not require Mesh Saver when you're done.</b><br>
