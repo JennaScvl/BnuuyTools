@@ -6,7 +6,7 @@ Many of these instantiate meshes and materials. Make sure that before you use th
 An Explanation of the tools.<br>
 <br>
 # Mesh Saver
-This saves a SkinnedMeshRenderer's shared mesh as an asset and then applies that asset to the same SkinnedMeshRenderer. The idea here is to save your work.<br>
+This saves a SkinnedMeshRenderer's shared mesh as an asset and then applies that asset to the same SkinnedMeshRenderer. The idea here is to save your work. Remember, all of these scripts work with instantiated meshes rather than overwriting the original asset, so you need to save your work as you go along.<br>
 <br>
 # Bone Merger
 This merges a bone into its parent. This basically makes bones fuse into their parents. At currently it only works on bones with a parent but no children. Do not use it on your root bone nor on your armature, and only use it on bones.<br>
@@ -20,6 +20,8 @@ It applies the bone deletion to all relevant skinned meshes in the root of the o
 <br>
 # Mesh Combiner
 This script takes two SkinnedMeshRenderers and merges them into a single one. It leaves the originals just in case something didn't work right. The new one ends up being named after both of the ones it derived from. It usually works but sometimes it fails to work correctly. It attempts to preserve blendshapes, bones, weights, and even tries to take into account that the two meshes in question might reference bones the other mesh doesn't have. This lets you easily reduce the number of SkinnedMeshRenderers in the avatar.<br>
+<br>
+Recent update. It's been made more robust and now preserves blendshapes and orietations better. Still not perfect but getting there.
 <br>
 <b>Requires Mesh Saver when you're done.<b><br>
 <br>
