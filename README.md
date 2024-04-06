@@ -39,6 +39,11 @@ This will list all of the submeshes on a skinned mesh by the name of the materia
 It does not delete the vertices to make it easier to leave blendshapes and weights alone. However it also doesn't get rid of the submesh itself. To do that, I recommend using the Submesh Combiner. Just set the materials on the deleted submeshes to an existing material and hit combine. To that end make sure you have the latest version of Submesh Combiner because I had to update it to support merging in the resulting 0 triangle submeshes. It's also been made more robust as it preserves blend shapes and orientation better now.<br>
 <br>
 <b>Requires Mesh Saver when you're done.</b><br>
+# Submesh Inverter
+This will list all of the submeshes on a skinned mesh by the name of the material they're using. You can then hit the button to invert the triangles in that submesh.<br>
+This is useful for the rare cases where a submesh is wound inside out which is a problem I've encountered with some hairs built in to some avatar meshes.
+<br>
+<b>Requires Mesh Saver when you're done.</b><br>
 # UV Baker
 This one's a little roundabout. What you do is you make an atlased texture and use that texture in all of the materials you want to atlas. Then adjust the repeats and offsets for each one so that they're compensating for the fact that the texture's been replaced with an atlas. Once you have that done, go to the skinned mesh renderer on the object and click "Bake UVs" at the bottom. Pretty much instantly it should look messed up again. Don't worry, just make one more material that uses the atlas with the repeats at 1,1 and the offsets at 0,0. Now you can use that material on each of the submeshes that you're making the atlas for. Once you have that done, use the Submesh combiner to combin those submeshes down to a single submesh and thus a single material instance.
 <br>
